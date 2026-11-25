@@ -1,11 +1,11 @@
 # Kybernos IT — Site Guide
 
 Read the master workspace guide first: [`..\CLAUDE.md`](../CLAUDE.md). It covers the
-shared build recipe (Astro + GitHub Pages), the publish steps, and the domain-freeing
+shared build recipe (Astro, served from Vault), the publish steps, and the domain-freeing
 plan. This file only covers what's specific to Kybernos IT.
 
-- **Domain:** kybernosit.com — *confirm current host with Josh; may point straight at
-  GitHub Pages (not on Google Sites like the other two).*
+- **Domain:** kybernosit.com (repo `jwollberg/kybernosit`), served from Vault, Josh's home server, through Cloudflare (since 2026-11-25; GitHub Pages before, still deployed as the fallback until Josh turns it off). Push to `main`: GitHub builds it, the workflow's `vault` job pushes the finished pages to the `site` branch, and Vault serves them within about four minutes. How it works and how to roll back: `AtheosHome/vault/README.md`, "Public websites", in `jwollberg/atheos-home`. Its zone also
+  holds Kybernos's app hostnames (`app.`, `api.`, `sync.`, `sedulous*.`) on a separate tunnel: leave them alone.
 - **What it is:** an IT services company. **Assumed** focus: managed IT / support /
   consulting for small businesses. **Confirm the exact services with Josh.**
 - **Name note:** "Kybernos" is Greek for *helmsman / governor* (the root of both
